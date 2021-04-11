@@ -1,0 +1,108 @@
+.body{
+  background-color: black;
+  
+  overflow-x: hidden;
+  padding: 5%;
+  color: white ;
+
+}
+
+.intro-text{
+
+  margin-top: 10px;
+  font-style: italic;
+  font-family: Dancing Script;
+  font-size: x-large;
+  font-weight: bolder;
+ 
+  text-align: center;
+}
+
+.add-file{
+
+  font-style: italic;
+  font-family: Dancing Script;
+  font-size: x-large;
+  font-weight: bolder;
+  
+  width: 100%;
+  border: 1px solid white ;
+  text-align: center;
+  height: 350px;
+   
+}
+
+.addfile-content{
+  margin-top: 1%;
+  align-items: center;  
+}
+
+.cardbody-length{
+  
+  
+  width: 100%;
+  float: right;
+  align-content: center;
+  padding: 0%;
+  height: 350px;
+
+  border: 1px solid white;
+
+  
+ 
+  
+  
+ 
+}
+.roww{
+
+  margin-top: 5%;
+  
+  
+}
+.roww2{
+ 
+  border: 1px solid yellow;
+  width: 35%;
+}
+.vl {
+  border-left: 3px solid white;
+  height: 60%;
+  margin-left: 59%;
+  position: absolute;
+  top: 40%;
+}
+
+.arrow{
+  font-size: 40px;
+  margin-left: 30%;
+
+
+}
+.arrow1{
+  font-size: 40px;
+  margin-left: 40%;
+
+
+
+}
+
+.mint{
+  position: relative;
+  margin-top: 3%;
+  float: right;
+  
+
+  font: bolder;
+  font-size: 30px;
+}
+
+
+.file-type-menu{
+ margin-top: '1px';
+}
+
+
+.input-file{
+  margin-top: 25%;
+}
