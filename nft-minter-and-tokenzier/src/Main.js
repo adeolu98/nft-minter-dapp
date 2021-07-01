@@ -8,24 +8,43 @@ import React, { Component } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
-
-
 class Main extends Component {
 
     constructor(props) {
         super(props);
         this.state = { value: 'img' };
-
         this.handleChange = this.handleChange.bind(this);
-
     }
 
     handleChange(event) {
         this.setState({ value: event.target.value });
     }
 
+    handleFileRead = (e) => {
+        const content = fileReader.result;
+        console.log(content)
+        // … do something with the 'content' …
+    };
+
+      handleFileChosen = (file) => {
+        fileReader = new FileReader();
+        fileReader.onloadend = handleFileRead;
+        fileReader.readAsText(file);
+      };
+
+      readURL = (input)=> {
+        var ext = input.files[0]['name'].substring(input.files[0]['name'].lastIndexOf('.') + 1).toLowerCase();
+       if (input.files && input.files[0] && (ext == "mp3" || ext == "mp4" ||ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")){  
+           var reader = new FileReader();
+           reader.onload = function (e) {
+               $('#img').attr('src', e.target.result);
+           }
+       
+           reader.readAsDataURL(input.files[0]);
+       } else{
+            $('#img').attr('src', '/assets/no_preview.png');
+       }
+       }
 
 
 
@@ -88,7 +107,7 @@ class Main extends Component {
                                     </div>
                                     < div className='input-file'>
                                         <p>add file </p>
-                                        <input type='file' onchange="readURL(this);" />
+                                        <input type='file' id="upload" onchange= {(event) => {this.readURL();}} />
                                     </ div>
                                 </div>
 

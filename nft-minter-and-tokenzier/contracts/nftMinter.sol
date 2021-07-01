@@ -11,12 +11,9 @@ contract NFTMINTER is ERC721 {
 
     }
 
-    function setTokenURI(string memory uri, uint256 TokenID) public {
-        _setTokenURI(TokenID, uri);
-    }
-
-    function mint(address _to, uint256 TokenID) public {
+    function mint(address _to, uint256 TokenID, string memory _tokenURI) public {
         _mint(_to, TokenID);
+        _setTokenURI(TokenID, _tokenURI);
     }
 
     function getNEXTtokenID() public returns (uint256) {

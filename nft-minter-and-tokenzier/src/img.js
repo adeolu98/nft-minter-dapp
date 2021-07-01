@@ -23,7 +23,7 @@ class Img extends Component {
             <div>
 
                 <div class="card-body cardbody-length rounded" >
-                    <img src="" id="blah" alt='' style={{ width: "100%", height: "100%" }}>
+                    <img src="" id="img" alt='' style={{ width: "100%", height: "100%" }}>
                     </img>
                 </div>
 
